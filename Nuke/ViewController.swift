@@ -21,15 +21,16 @@ class ViewController: NSViewController {
         let workspace = NSWorkspace.shared
         let openApps = workspace.runningApplications.filter { $0.activationPolicy == .regular }
 
-        print("Hello World!")
         for app in openApps {
             if app.localizedName ?? "" == "Finder" {
                 continue
             }
 
-            if !app.forceTerminate() {
-                print("Closed \(app.localizedName)")
-            }
+            app.forceTerminate()
         }
+    }
+
+    @IBAction func quitPressed(_ sender: Any) {
+        NSApplication.shared.terminate(self)
     }
 }

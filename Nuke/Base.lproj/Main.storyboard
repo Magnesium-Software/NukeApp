@@ -698,12 +698,26 @@
                                     <action selector="nukePressed:" target="XfG-lQ-9wD" id="lSp-kN-OCE"/>
                                 </connections>
                             </button>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="skh-Ph-3Kw">
+                                <rect key="frame" x="174" y="4" width="17" height="21"/>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSStopProgressFreestandingTemplate" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="5GH-UX-Kst">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="quitPressed:" target="XfG-lQ-9wD" id="OyL-DG-cjt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="skh-Ph-3Kw" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="174" id="90r-l0-FrL"/>
+                            <constraint firstAttribute="trailing" secondItem="skh-Ph-3Kw" secondAttribute="trailing" constant="7" id="Acg-Qk-Zkq"/>
+                            <constraint firstAttribute="bottom" secondItem="skh-Ph-3Kw" secondAttribute="bottom" constant="7" id="GQK-lN-DfR"/>
                             <constraint firstAttribute="bottom" secondItem="Acq-ij-fii" secondAttribute="bottom" constant="40" id="T8z-n4-a8o"/>
                             <constraint firstAttribute="trailing" secondItem="Acq-ij-fii" secondAttribute="trailing" constant="40" id="VsA-pO-zB5"/>
                             <constraint firstItem="Acq-ij-fii" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="40" id="fSV-Qc-5Lq"/>
                             <constraint firstItem="Acq-ij-fii" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="40" id="hxZ-tp-v5K"/>
+                            <constraint firstItem="skh-Ph-3Kw" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="78" id="ymM-uM-7sR"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -712,4 +726,7 @@
             <point key="canvasLocation" x="75" y="200"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NSStopProgressFreestandingTemplate" width="15" height="15"/>
+    </resources>
 </document>
