@@ -6,35 +6,37 @@
 //
 
 import Cocoa
+import SwiftUI
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
-    let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+    var popover: NSPopover!
+    var statusBarItem: NSStatusItem!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        statusItem.button?.title = "Nuke"
-        statusItem.button?.target = self
-        statusItem.button?.action = #selector(showSettings)
+        let contentView = ContentView()
+
+        let popover = NSPopover()
+        popover.contentSize = NSSize(width: 400, height: 500)
+        popover.behavior = .transient
+        popover.contentViewController = NSHostingController(rootView: contentView)
+        self.popover = popover
+
+        statusBarItem = NSStatusBar.system.statusItem(withLength: CGFloat(NSStatusItem.variableLength))
+
+        if let button = statusBarItem.button {
+            button.image = NSImage(systemSymbolName: "xmark.circle", accessibilityDescription: "Nuke")
+            button.action = #selector(togglePopover(_:))
+        }
     }
 
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
-    }
-
-    @objc func showSettings() {
-        let storyboard = NSStoryboard(name: "Main", bundle: nil)
-        guard let vController = storyboard.instantiateController(
-                withIdentifier: "ViewController") as? ViewController else {
-            fatalError("Unable to find a story board with ID of: ViewController")
+    @objc func togglePopover(_ sender: AnyObject?) {
+        if let button = statusBarItem.button {
+            if popover.isShown {
+                popover.performClose(sender)
+            } else {
+                popover.show(relativeTo: button.bounds, of: button, preferredEdge: .minY)
+            }
         }
-
-        guard let button = statusItem.button else {
-            fatalError("Couldn't find the status item button.")
-        }
-
-        let popoverView = NSPopover()
-        popoverView.contentViewController = vController
-        popoverView.behavior = .transient
-        popoverView.show(relativeTo: button.bounds, of: button, preferredEdge: .maxY)
     }
 }
