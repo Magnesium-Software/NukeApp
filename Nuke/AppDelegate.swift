@@ -23,7 +23,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @objc func showSettings() {
         let storyboard = NSStoryboard(name: "Main", bundle: nil)
-        guard let vc = storyboard.instantiateController(withIdentifier: "ViewController") as? ViewController else {
+        guard let vController = storyboard.instantiateController(
+                withIdentifier: "ViewController") as? ViewController else {
             fatalError("Unable to find a story board with ID of: ViewController")
         }
 
@@ -32,7 +33,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
 
         let popoverView = NSPopover()
-        popoverView.contentViewController = vc
+        popoverView.contentViewController = vController
         popoverView.behavior = .transient
         popoverView.show(relativeTo: button.bounds, of: button, preferredEdge: .maxY)
     }
