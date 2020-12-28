@@ -1,0 +1,14 @@
+commit_message: 🔄 Update file via sync
+
+replace:
+  - before: project_name
+    after: NukeApp
+  - before: project_description
+    after: 🍎 Force quit all your open apps instantly from the menu bar
+files:
+  - path: LICENSE.md
+    source: https://github.com/Magnesium-Software/shared/blob/main/licenses/gnu-gpl-v3.md
+  - path: CODE_OF_CONDUCT.md
+    source: https://github.com/Magnesium-Software/shared/blob/main/docs/coc.md
+  - path: .github/workflows/sync.yml
+    source: https://github.com/Magnesium-Software/shared/blob/main/workflows/sync.yml
