@@ -18,6 +18,18 @@ class ViewController: NSViewController {
     }
 
     @IBAction func nukePressed(_ sender: NSButton) {
+        let workspace = NSWorkspace.shared
+        let openApps = workspace.runningApplications.filter { $0.activationPolicy == .regular }
+
         print("Hello World!")
+        for app in openApps {
+            if app.localizedName ?? "" == "Finder" {
+                continue
+            }
+
+            if !app.forceTerminate() {
+                print("Closed \(app.localizedName)")
+            }
+        }
     }
 }
