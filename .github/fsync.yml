@@ -5,6 +5,9 @@ replace:
     after: NukeApp
   - before: project_description
     after: 🍎 Force quit all your open apps instantly from the menu bar
+  - before: project_author_email
+    after: magnesiumsoftware@gmail.com
+
 files:
   - path: LICENSE.md
     source: https://github.com/Magnesium-Software/shared/blob/main/licenses/gnu-gpl-v3.md
