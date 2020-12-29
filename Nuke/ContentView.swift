@@ -19,7 +19,7 @@ struct NukeButtonStyle: ButtonStyle {
 }
 
 struct ContentView: View {
-    let width = CGFloat(130)
+    let width = CGFloat(180)
     let height = CGFloat(150)
 
     var body: some View {
@@ -38,6 +38,7 @@ struct ContentView: View {
 
             }, label: {
                 Text("NUKE!")
+                    .padding()
             }).buttonStyle(NukeButtonStyle())
 
             // Quit  nuke button
