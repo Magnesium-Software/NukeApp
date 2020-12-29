@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C901CA6A25993DEE006DF5BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C901CA6925993DEE006DF5BE /* AppDelegate.swift */; };
-		C901CA6C25993DEE006DF5BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C901CA6B25993DEE006DF5BE /* ViewController.swift */; };
 		C901CA6E25993DEE006DF5BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C901CA6D25993DEE006DF5BE /* Assets.xcassets */; };
 		C901CA7125993DEE006DF5BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C901CA6F25993DEE006DF5BE /* Main.storyboard */; };
 		C990D437259A9E3E00A1711E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C990D436259A9E3E00A1711E /* ContentView.swift */; };
@@ -17,7 +16,6 @@
 /* Begin PBXFileReference section */
 		C901CA6625993DEE006DF5BE /* Nuke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nuke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C901CA6925993DEE006DF5BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C901CA6B25993DEE006DF5BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C901CA6D25993DEE006DF5BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C901CA7025993DEE006DF5BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C901CA7225993DEE006DF5BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,7 +55,6 @@
 			children = (
 				C901CA6925993DEE006DF5BE /* AppDelegate.swift */,
 				C990D436259A9E3E00A1711E /* ContentView.swift */,
-				C901CA6B25993DEE006DF5BE /* ViewController.swift */,
 				C901CA6D25993DEE006DF5BE /* Assets.xcassets */,
 				C901CA6F25993DEE006DF5BE /* Main.storyboard */,
 				C901CA7225993DEE006DF5BE /* Info.plist */,
@@ -83,6 +80,8 @@
 			dependencies = (
 			);
 			name = Nuke;
+			packageProductDependencies = (
+			);
 			productName = Nuke;
 			productReference = C901CA6625993DEE006DF5BE /* Nuke.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +109,8 @@
 				Base,
 			);
 			mainGroup = C901CA5D25993DEE006DF5BE;
+			packageReferences = (
+			);
 			productRefGroup = C901CA6725993DEE006DF5BE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -156,7 +157,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C901CA6C25993DEE006DF5BE /* ViewController.swift in Sources */,
 				C901CA6A25993DEE006DF5BE /* AppDelegate.swift in Sources */,
 				C990D437259A9E3E00A1711E /* ContentView.swift in Sources */,
 			);
