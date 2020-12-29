@@ -26,22 +26,14 @@ struct ContentView: View {
         VStack {
             // Main nuke button
             Button(action: {
-                let workspace = NSWorkspace.shared
-                let openApps = workspace.runningApplications
-
-                var closedApps = 0
-                for app in openApps where app.activationPolicy == .regular {
-                    app.forceTerminate()
-                    closedApps += 1
-                }
+                let closedApps = closeApps()
                 sendNotification(closedApps)
-
             }, label: {
                 Text("NUKE!")
                     .padding()
             }).buttonStyle(NukeButtonStyle())
 
-            // Quit  nuke button
+            // Quit nuke button
             Button(action: {
                 NSApplication.shared.terminate(self)
             }, label: {
@@ -50,7 +42,19 @@ struct ContentView: View {
         }.frame(width: width, height: height)
     }
 
-    func sendNotification(_ numberOfApps: Int) {
+    private func closeApps() -> Int {
+        let workspace = NSWorkspace.shared
+        let openApps = workspace.runningApplications
+
+        var closedApps = 0
+        for app in openApps where app.activationPolicy == .regular {
+            app.forceTerminate()
+            closedApps += 1
+        }
+        return closedApps
+    }
+
+    private func sendNotification(_ numberOfApps: Int) {
         UNUserNotificationCenter.current().requestAuthorization(options: [.badge]) { success, error in
             if success {
                 print("All set!")
