@@ -1,2 +1,5 @@
 # cocoapods
 Pods
+
+# macOS Finder data
+.DS_Store
