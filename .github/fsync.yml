@@ -15,3 +15,5 @@ files:
     source: https://github.com/Magnesium-Software/shared/blob/main/docs/coc.md
   - path: .github/workflows/sync.yml
     source: https://github.com/Magnesium-Software/shared/blob/main/workflows/sync.yml
+  - path: .github/workflows/lint.yml
+    source: https://github.com/Magnesium-Software/shared/blob/main/workflows/lint.yml
