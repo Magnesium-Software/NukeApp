@@ -17,3 +17,5 @@ files:
     source: https://github.com/Magnesium-Software/shared/blob/main/workflows/sync.yml
   - path: .github/workflows/lint.yml
     source: https://github.com/Magnesium-Software/shared/blob/main/workflows/lint.yml
+  - path: .gitignore
+    source: https://github.com/Magnesium-Software/shared/blob/main/config/.gitignore
