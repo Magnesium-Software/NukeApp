@@ -28,6 +28,8 @@
 	<true/>
 	<key>NSMainStoryboardFile</key>
 	<string>Main</string>
+	<key>SUPublicEDKey</key>
+	<string>crBFvg+195gPvCDJmTzRQxnXAw48CpePxoOVtfDyjfI=</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 </dict>
