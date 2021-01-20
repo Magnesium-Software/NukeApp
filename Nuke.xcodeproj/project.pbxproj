@@ -12,6 +12,8 @@
 		C901CA6E25993DEE006DF5BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C901CA6D25993DEE006DF5BE /* Assets.xcassets */; };
 		C901CA7125993DEE006DF5BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C901CA6F25993DEE006DF5BE /* Main.storyboard */; };
 		C990D437259A9E3E00A1711E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C990D436259A9E3E00A1711E /* ContentView.swift */; };
+		C9A3DDA425B54E4D00E79E57 /* NukeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A3DDA325B54E4D00E79E57 /* NukeButtonView.swift */; };
+		C9A3DDA825B5530800E79E57 /* QuitButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A3DDA725B5530800E79E57 /* QuitButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		C901CA7225993DEE006DF5BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C901CA7325993DEE006DF5BE /* Nuke.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Nuke.entitlements; sourceTree = "<group>"; };
 		C990D436259A9E3E00A1711E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C9A3DDA325B54E4D00E79E57 /* NukeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NukeButtonView.swift; sourceTree = "<group>"; };
+		C9A3DDA725B5530800E79E57 /* QuitButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitButtonView.swift; sourceTree = "<group>"; };
 		D89BA38E5F472074E8F92F2F /* Pods-Nuke.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nuke.release.xcconfig"; path = "Target Support Files/Pods-Nuke/Pods-Nuke.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +81,7 @@
 		C901CA6825993DEE006DF5BE /* Nuke */ = {
 			isa = PBXGroup;
 			children = (
+				C9A3DDA125B54E3200E79E57 /* Views */,
 				C901CA6925993DEE006DF5BE /* AppDelegate.swift */,
 				C990D436259A9E3E00A1711E /* ContentView.swift */,
 				C901CA6D25993DEE006DF5BE /* Assets.xcassets */,
@@ -85,6 +90,23 @@
 				C901CA7325993DEE006DF5BE /* Nuke.entitlements */,
 			);
 			path = Nuke;
+			sourceTree = "<group>";
+		};
+		C9A3DDA125B54E3200E79E57 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C9A3DDA225B54E3B00E79E57 /* Buttons */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C9A3DDA225B54E3B00E79E57 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				C9A3DDA325B54E4D00E79E57 /* NukeButtonView.swift */,
+				C9A3DDA725B5530800E79E57 /* QuitButtonView.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +240,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9A3DDA425B54E4D00E79E57 /* NukeButtonView.swift in Sources */,
+				C9A3DDA825B5530800E79E57 /* QuitButtonView.swift in Sources */,
 				C901CA6A25993DEE006DF5BE /* AppDelegate.swift in Sources */,
 				C990D437259A9E3E00A1711E /* ContentView.swift in Sources */,
 			);

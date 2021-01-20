@@ -8,37 +8,18 @@
 import SwiftUI
 import UserNotifications
 
-struct NukeButtonStyle: ButtonStyle {
-    func makeBody(configuration: Self.Configuration) -> some View {
-        configuration.label
-            .foregroundColor(configuration.isPressed ? Color.red : Color.white)
-            .background(configuration.isPressed ? Color.white : Color.red)
-            .cornerRadius(6.0)
-            .padding()
-    }
-}
-
 struct ContentView: View {
-    let width = CGFloat(180)
-    let height = CGFloat(150)
+    let width = CGFloat(300)
+    let height = CGFloat(180)
 
     var body: some View {
         VStack {
-            // Main nuke button
-            Button(action: {
+            NukeButtonView(title: "NUKE", action: {
                 let closedApps = closeApps()
                 sendNotification(closedApps)
-            }, label: {
-                Text("NUKE!")
-                    .padding()
-            }).buttonStyle(NukeButtonStyle())
-
-            // Quit nuke button
-            Button(action: {
-                NSApplication.shared.terminate(self)
-            }, label: {
-                Text("Quit Nuke")
             })
+
+            QuitButtonView()
         }.frame(width: width, height: height)
     }
 
